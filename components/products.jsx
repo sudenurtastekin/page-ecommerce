@@ -35,23 +35,25 @@ export default function Products() {
     ));
   }
 
-  return(
+  return (
     <div className="ProductsContainer">
-      
       <ul>
         {products.map(x => (
           <li key={x.id}>
-            <img src={x.thumbnail} />
+            <img src={x.thumbnail} alt={x.title} />
             <h5>{x.category}</h5>
             <h1>{x.title}</h1>
             <p>{x.description}</p>
-            <span><h2>{x.price}</h2><h4>{x.discountPercentage}%</h4></span>
-            <span>
+            <span key={`price-${x.id}`}>
+              <h2>{x.price}</h2>
+              <h4>{x.discountPercentage}%</h4>
+            </span>
+            <span key={`link-${x.id}`}>
               <Link href={"/"+ x.category +"/" + x.id} className="detail">Details</Link>
             </span>
-            <span className="BudgetBtns">
+            <span className="BudgetBtns" key={`buttons-${x.id}`}>
               <button onClick={() => handleDecrement(x.id)}>➖</button>
-                <span>{count.find((item) => item.id === x.id)?.count || 0}</span>
+              <span>{count.find((item) => item.id === x.id)?.count || 0}</span>
               <button onClick={() => handleIncrement(x.id)}>➕</button>
             </span>
             <button className="AddBtn">Add to cart</button>
@@ -59,5 +61,5 @@ export default function Products() {
         ))}
       </ul>
     </div>
-  )
+  );
 }

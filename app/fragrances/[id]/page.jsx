@@ -21,7 +21,7 @@ export default async function FragrancesDetail({params}) {
         <div className="Comments">
           <h5>{data.description}</h5>
           {data.reviews.map(x => (
-            <li className="comments-list">
+            <li key={index} className="comments-list">
               <p><strong>{x.reviewerName}:</strong>{x.comment}</p>
               <p>{x.date}</p>
             </li>
