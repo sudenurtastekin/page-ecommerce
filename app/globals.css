@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --font-geist-sans: 'Geist Sans', sans-serif;
+  --font-geist-mono: 'Geist Mono', monospace;
+  --color-primary: green;
+  --color-background: #FFFFFF;
+  --color-text: #1D2026;
+  --color-muted: #69707D;
+  --color-accent: #FFEEE2;
+}
+
+body {
+  font-family: var(--font-geist-sans);
+  background-color: var(--color-background);
+  line-height: 1.6;
+  padding: 0 15px;
+}
+
+.container {
+  padding: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    padding: 20px;
+    max-width: 720px;
+  }
+
+  @media (min-width: 1110px) {
+    padding: 20px;
+    max-width: 1200px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 40px;
+  text-align: center; 
+
+  img {
+    margin-bottom: 15px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1, h2, h4 {
+    color: var(--color-text);
+  }
+
+  h5 {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  h4 {
+    font-size: 14px;
+    background-color: var(--color-accent);
+    padding: 4px 6px;
+    border-radius: 8px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--color-muted);
+    margin-bottom: 16px;
+  }
+
+  span {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 16px;
+  }
+}
+
+.Nav {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 20px;
+
+  h1 {
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  a {
+    color: var(--color-muted);
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row; 
+    justify-content: space-between;
+    h1 {
+      font-size: 32px;
+    }
+  }
+}
+
+.BudgetBtns {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F6F8FD;
+  border-radius: 12px;
+  margin-bottom: 16px;
+
+  button {
+    background: none;
+    border: none;
+    padding: 10px;
+  }
+}
+
+.AddBtn {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  box-shadow: 0px 10px 20px -5px var(--color-primary);
+  border-radius: 12px;
+  padding: 10px 20px;
+  width: 100%; 
+  text-align: center;
+
+  &:hover {
+    background-color: rgb(156, 223, 56);
+    color: green;
+  }
+
+  @media (min-width: 768px) {
+    padding: 15px 40px;
+  }
+}
+
+.detail {
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFEEE2;
+  background-color: var(--color-primary);
+  padding: 4px 6px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.ProductDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+
+  h2 {
+    font-size: 18px;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row; 
+    align-items: flex-start;
+  }
+}
+
+.comments-list {
+  color: var(--color-muted);
+
+  p {
+    margin-bottom: 5px;
+    text-align: left;
+  }
+}
+
+.Comments {
+  margin: 0 auto;
+  max-width: 100%;
+
+  h5 {
+    color: var(--color-muted);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+}
+
+.alisverissepeti {
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.Link {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  a {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid var(--color-muted);
+    border-radius: 8px;
+  }
+
+  @media (min-width: 768px) {
+    text-align: center;
+    grid-template-columns: repeat(5, 1fr); 
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+
+@media (min-width: 768px) {
+  .ProductsContainer ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1110px) {
+  .ProductsContainer ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .ProductDetails {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
