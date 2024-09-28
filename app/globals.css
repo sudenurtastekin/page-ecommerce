@@ -7,7 +7,7 @@
 :root {
   --font-geist-sans: 'Geist Sans', sans-serif;
   --font-geist-mono: 'Geist Mono', monospace;
-  --color-primary: green;
+  --color-primary:  #FF7E1B;;
   --color-background: #FFFFFF;
   --color-text: #1D2026;
   --color-muted: #69707D;
@@ -157,8 +157,8 @@ li {
   text-align: center;
 
   &:hover {
-    background-color: rgb(156, 223, 56);
-    color: green;
+    background-color: #FFAB6A;
+    color:  #FF7E1B;;
   }
 
   @media (min-width: 768px) {
