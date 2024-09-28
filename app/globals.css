@@ -7,320 +7,259 @@
 :root {
   --font-geist-sans: 'Geist Sans', sans-serif;
   --font-geist-mono: 'Geist Mono', monospace;
+  --color-primary:  #FF7E1B;;
+  --color-background: #FFFFFF;
+  --color-text: #1D2026;
+  --color-muted: #69707D;
+  --color-accent: #FFEEE2;
+}
+
+body {
+  font-family: var(--font-geist-sans);
+  background-color: var(--color-background);
+  line-height: 1.6;
+  padding: 0 15px;
 }
 
 .container {
-  font-family: var(--font-geist-sans);
-}
+  padding: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  @media (min-width: 768px) {
+    padding: 20px;
+    max-width: 720px;
+  }
 
-body {
-  background-color: #FFFFFF;
-}
-
-button{
-  cursor:pointer;
-
+  @media (min-width: 1110px) {
+    padding: 20px;
+    max-width: 1200px;
+  }
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
-hr{
-  margin: 30px 0px;
+hr {
+  margin: 20px 0;
 }
 
 li {
   list-style: none;
-  margin-bottom: 88px;
+  margin-bottom: 40px;
+  text-align: center; 
+
   img {
-    margin-bottom: 25px;
-  } 
-  h5 {
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 14.88px;
-    letter-spacing: 1.8461538553237915px;
-    text-align: left;
-    color: #FF7E1B;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    max-width: 100%;
+    height: auto;
   }
-  h1 {
-    font-size: 28px;
+
+  h1, h2, h4 {
+    color: var(--color-text);
+  }
+
+  h5 {
+    font-size: 14px;
     font-weight: 700;
-    line-height: 32px;
-    text-align: left;
+    letter-spacing: 1.5px;
+    color: var(--color-primary);
     margin-bottom: 15px;
   }
-  p {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 25px;
-    text-align: left;
-    margin-bottom: 24px;
-    color: #69707D;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
   }
-  span {
-    display: flex;
-    gap: 22px;
-    margin-bottom: 24px;
-    align-items: baseline;
-  }
+
   h2 {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 700;
-    line-height: 34.73px;
-    text-align: left;
-    color: #1D2026;
   }
+
   h4 {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 19.84px;
-    text-align: left;
-    color: #FF7E1B;
-    background-color: #FFEEE2;
+    font-size: 14px;
+    background-color: var(--color-accent);
     padding: 4px 6px;
     border-radius: 8px;
   }
-}
 
-.container {
-  padding: 20px 20px;
-  width: 375px;
-  margin: 0 auto;
-}
-
-.Nav {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 25px;
-  align-items: center;
-  a {
-    color: #69707D;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 26px;
-    text-align: left;
+  p {
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--color-muted);
+    margin-bottom: 16px;
   }
-  h1 {
-    font-size: 36px;
-    font-weight: 800;
+
+  span {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 16px;
   }
-}
-
-.BudgetBtns {
-  display: flex;
-  background-color: #F6F8FD;
-  color: #1D2026;
-  justify-content: space-between;
-  border-radius: 12px;
-  align-items: baseline;
-  margin-bottom: 16px;
-  width: 327px;
-  button {
-    background: unset;
-    border: unset;
-    padding: 16px 20px;
-  }
-}
-
-.AddBtn {
-  background-color: #FF7E1B;
-  color: #FFFFFF;
-  box-shadow: 0px 20px 50px -20px #FF7E1B;
-  border: 2px solid #FF7E1B;
-  justify-content: space-between;
-  border-radius: 12px;
-  align-items: baseline;
-  padding: 18px 100px;
-  width: 327px;
-}
-
-.detail {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 19.84px;
-  text-align: left;
-  color: #FFEEE2;
-  padding: 4px 6px;
-  border-radius: 8px;
-  background-color: #FF7E1B;
-  margin-bottom: 15px;
-}
-
-.font-extrabold {
-  color: #FF7E1B;
-  margin-bottom: 20px;
-}
-
-.ProductDetails {
-  h2{
-    color: #69707D;
-    margin-bottom: 5px;
-  }
-}
-
-.comments-list {
-  color: #69707D;
-  margin-bottom: 4px;
-  p{
-    margin-bottom: 2px;
-  }
-}
-
-.Comments {
-  margin: 0 auto;
-  h5 {
-    color: #69707D;
-    margin-bottom: 25px;
-    font-size: 16px;
-    font-weight: 500;
-  }
-}
-
-.alisverissepeti {
-  background-color: unset;
-  border: unset;
-  font-size: 20px;
-  cursor: pointer;
 }
 
 .Nav {
   display: flex;
   flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 20px;
+
+  h1 {
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  a {
+    color: var(--color-muted);
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row; 
+    justify-content: space-between;
+    h1 {
+      font-size: 32px;
+    }
+  }
+}
+
+.BudgetBtns {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F6F8FD;
+  border-radius: 12px;
+  margin-bottom: 16px;
+
+  button {
+    background: none;
+    border: none;
+    padding: 10px;
+  }
+}
+
+.AddBtn {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  box-shadow: 0px 10px 20px -5px var(--color-primary);
+  border-radius: 12px;
+  padding: 10px 20px;
+  width: 100%; 
+  text-align: center;
+
+  &:hover {
+    background-color: rgb(156, 223, 56);
+    color:  #FF7E1B;;
+  }
+
+  @media (min-width: 768px) {
+    padding: 15px 40px;
+  }
+}
+
+.detail {
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFEEE2;
+  background-color: var(--color-primary);
+  padding: 4px 6px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.ProductDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+
+  h2 {
+    font-size: 18px;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row; 
+    align-items: flex-start;
+  }
+}
+
+.comments-list {
+  color: var(--color-muted);
+
+  p {
+    margin-bottom: 5px;
+    text-align: left;
+  }
+}
+
+.Comments {
+  margin: 0 auto;
+  max-width: 100%;
+
+  h5 {
+    color: var(--color-muted);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+}
+
+.alisverissepeti {
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  background: none;
 }
 
 .Link {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
   a {
     text-align: center;
+    padding: 10px;
+    border: 1px solid var(--color-muted);
+    border-radius: 8px;
+  }
+
+  @media (min-width: 768px) {
+    text-align: center;
+    grid-template-columns: repeat(5, 1fr); 
   }
 }
 
-@media(width >= 768px) {
-  .container {
-    margin: 0 auto;
-    width: 778px;
-    padding: 25px;
-  }
+button {
+  cursor: pointer;
+}
 
-  .ProductsContainer ul{
+
+@media (min-width: 768px) {
+  .ProductsContainer ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
-
-  .ProductDetails {
-    display: flex;
-    gap: 70px;
-    align-items: baseline;
-  }
-
-  .alisverissepeti {
-    background-color: unset;
-    border: unset;
-    font-size: 20px;
-  }
-
-  .Nav {
-    display: flex;
-    gap: 36px;
-    margin-bottom: 50px;
-    align-items: center;
-    justify-content: space-around;
-    align-items: baseline;
-    flex-direction: row;
-  }
-
-  .Link {
-    display: flex;
-    gap: 30px;
-  }
-
 }
 
-
-@media(width >= 1110px) {
-  .container {
-    margin: 0 auto;
-    width: 1440px;
-    padding: 30px;
-  }
-  
-  .Nav {
-    display: flex;
-    gap: 297px;
-    margin-bottom: 50px;
-    align-items: baseline;
-    justify-content: space-around;
-    flex-direction: row;
-  }
-
-  .Link {
-    display: flex;
-    gap: 30px;
-  }
-
-  .ProductsContainer ul{
+@media (min-width: 1110px) {
+  .ProductsContainer ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    .detail a {
-      margin-bottom: 15px;
-    }
-  }
-
-  .BudgetBtns {
-    width: 450px;
-    cursor: pointer;
-    button {
-      cursor: pointer;
-    }
-  }
-
-  .AddBtn {
-    width: 450px;
-    cursor: pointer;
-  }
-
-  button.AddBtn:hover {
-    background-color: #fd8d38;
-    border: 2px solid #fd8d38;
+    gap: 20px;
   }
 
   .ProductDetails {
-    display: flex;
-    gap: 150px;
-  }
-
-  hr{
-    margin: 50px 0px;
-  }
-
-  .comments-list ul{
-    margin-bottom: 50px;
-  }
-
-  .Link a:hover {
-    color: #FF7E1B;
-    text-decoration: underline;
-  }
-
-  .alisverissepeti {
-    background-color: unset;
-    border: unset;
-    font-size: 20px;
-    cursor: pointer;
-  }
-
-  .detail:hover {
-    background-color: #FFEEE2;
-    color: #FF7E1B;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
