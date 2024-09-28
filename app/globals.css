@@ -157,7 +157,7 @@ li {
   text-align: center;
 
   &:hover {
-    background-color: rgb(156, 223, 56);
+    background-color: #FFAB6A;
     color:  #FF7E1B;;
   }
 
